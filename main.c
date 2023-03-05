@@ -1,28 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 int main()
 {
-    char str[50] = {"Hello world!"};
-    bool condicao = false;
-    int i = 1;
-    int tam = 0;
+    char nome[21];
 
-    while(condicao !=true){
+    printf("Digite seu nome: ");
+    fgets(nome, 20, stdin);
 
-            if(str[i] == '\0'){
-                condicao = true;
-                tam += 1;
-            }
-            else{
-                tam += 1;
-            }
-            i++;
+    if(nome[0] == 'a' || nome[0] == 'A' ){
+
+        printf("Nome : %s", nome);
 
     }
 
-    printf("String: %s e o tamanho: %d ",str,tam);
+    else{
+
+        printf("Nome não começa com a letra A");
+
+    }
 
     return 0;
 }
